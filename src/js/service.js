@@ -8,7 +8,7 @@ export default class ApiService {
 
   fetchArticles() {
     return fetch(
-      `${BASE_URL}/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=4&key=${KEY}`,
+      `${BASE_URL}/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=40&key=${KEY}`,
     )
       .then(response => response.json())
       .then(({ hits }) => {
